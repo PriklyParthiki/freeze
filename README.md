@@ -1,29 +1,21 @@
 # Friendly Freeze
 
- The game was inspired by the theme "Freeze." It is a platformer game with the character choice of a penguin or a fox. Avoid the spikes and capture the fire and snow lanturns! Made by Parthiki, Rosy, and Sushmita.
-
-Parthiki - Node structure and code
-Rosy - Background, assets, and frames for FBF animations
-Sushmita - Animations and code
-
-
-# Friendly Freeze
-
 Friendly Freeze is a ragebait game made for Hack Club's Snowglobe program.
 
 **Live Demo:** https://…
 **Built By:**
+
 Parthiki - Node structure and code
 Rosy - Background, assets, and frames for FBF animations
 Sushmita - Animations and code
 
 ![screenshot of the project](screenshot.png)
 
-## how do you use it?
+## Description
 
-…
+The game was inspired by the theme "Freeze." It is a platformer game with the character choice of a penguin or a fox. Avoid the spikes and capture the fire and snow lanturns!
 
-## how we built it
+## How we built it
 
 We used the game engine Godot for this project. For the script, we used Godot's GD Script language.
 
