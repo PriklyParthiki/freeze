@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://dal8svfbx6v63" path="res://scenes/animatable_body_2d.gd" id="9_e3sih"]
 [ext_resource type="Texture2D" uid="uid://cetk7yhm5d4oe" path="res://IMG_5467.jpg" id="10_2y5yt"]
 [ext_resource type="Texture2D" uid="uid://bxc5cc8n421y1" path="res://IMG_5471.jpg" id="11_2os1m"]
+[ext_resource type="Script" uid="uid://igw40udfkxkp" path="res://scripts/spike.gd" id="12_7gny6"]
+[ext_resource type="Texture2D" uid="uid://dwl5q6f2bbfi6" path="res://scenes/Screenshot 2026-11-22 124022-Photoroom.png" id="12_go7sj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcsxo"]
 size = Vector2(81, 108)
@@ -20,6 +22,9 @@ size = Vector2(424.5, 110.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15mv3"]
 size = Vector2(213, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlkih"]
+size = Vector2(70, 46)
 
 [node name="level1" type="Node2D" unique_id=1621030381]
 position = Vector2(-2, 0)
@@ -46,6 +51,7 @@ rotation_smoothing_enabled = true
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=1952670433]
 position = Vector2(-25, -68)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=987677464]
 position = Vector2(88, 588)
@@ -80,6 +86,46 @@ position = Vector2(398, 566)
 texture = ExtResource("8_go7sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=525852448]
+position = Vector2(242.75, 591.25)
+shape = SubResource("RectangleShape2D_c84w1")
+
+[node name="platform2" type="StaticBody2D" parent="." unique_id=978501691]
+position = Vector2(1883, 36)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=1572300622]
+position = Vector2(88, 588)
+texture = ExtResource("3_rus8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="platform2" unique_id=1120791784]
+position = Vector2(178, 596)
+texture = ExtResource("4_15mv3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="platform2" unique_id=910594957]
+position = Vector2(87, 565)
+texture = ExtResource("6_2y5yt")
+
+[node name="Sprite2D5" type="Sprite2D" parent="platform2" unique_id=1728172968]
+position = Vector2(185, 575)
+texture = ExtResource("7_2os1m")
+
+[node name="Sprite2D3" type="Sprite2D" parent="platform2" unique_id=491533521]
+position = Vector2(286, 593)
+texture = ExtResource("4_15mv3")
+
+[node name="Sprite2D6" type="Sprite2D" parent="platform2" unique_id=710283624]
+position = Vector2(400, 584)
+texture = ExtResource("5_e3sih")
+
+[node name="Sprite2D7" type="Sprite2D" parent="platform2" unique_id=264068050]
+position = Vector2(291, 575)
+texture = ExtResource("7_2os1m")
+
+[node name="Sprite2D8" type="Sprite2D" parent="platform2" unique_id=584827669]
+position = Vector2(398, 566)
+texture = ExtResource("8_go7sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=160749190]
 position = Vector2(242.75, 591.25)
 shape = SubResource("RectangleShape2D_c84w1")
 
@@ -149,13 +195,14 @@ position = Vector2(1059, 442)
 shape = SubResource("RectangleShape2D_15mv3")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1522180992]
+visible = false
 rotation = 1.5707964
 scale = Vector2(1.3785626, 1.2211539)
 scroll_scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1816907635]
 z_index = -20
-position = Vector2(161.76266, -248.9449)
+position = Vector2(179.89749, -424.18896)
 scale = Vector2(1.6394354, 1.3277177)
 texture = ExtResource("10_2y5yt")
 
@@ -210,3 +257,18 @@ texture = ExtResource("11_2os1m")
 z_index = -9
 position = Vector2(-6.5285645, -1288.1259)
 texture = ExtResource("11_2os1m")
+
+[node name="spike" type="Area2D" parent="." unique_id=547848742]
+script = ExtResource("12_7gny6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="spike" unique_id=1793873632]
+position = Vector2(754, 480)
+rotation = 3.1415927
+texture = ExtResource("12_go7sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spike" unique_id=1777875452]
+position = Vector2(763, 480)
+shape = SubResource("RectangleShape2D_dlkih")
+
+[connection signal="body_entered" from="spike" to="spike" method="_on_body_entered"]

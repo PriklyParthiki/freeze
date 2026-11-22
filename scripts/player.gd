@@ -28,4 +28,10 @@ func _physics_process(delta: float) -> void:
 	# handle respawn
 	if position.y > 900:
 		#respawn
-		position = start_position
+		respawn()
+		
+	
+func respawn():
+	position = start_position
+		
+		
