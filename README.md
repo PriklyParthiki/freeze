@@ -15,7 +15,7 @@ Sushmita - Animations and code
 
 ## Description
 
-The game was inspired by the theme "Freeze." It is a platformer game with the character choice of a penguin or a fox. Avoid the spikes and capture the fire and snow lanturns!
+The game was inspired by the theme "Freeze." It is a platformer game with the character choice of a penguin or a fox. Avoid the spikes and defy gravity! The background music is Tiki Tiki Phonk, designed to give players the boost of aura needed to complete the game! Good luck! If you beat this game, be proud of yourself! Even the creators can’t beat it.
 
 ## How we built it
 
@@ -28,7 +28,7 @@ https://jams.hackclub.com/jam/godot-platformer
 
 ## what was hard, and how we fixed it
 
-…
+Adding the effects so the background looked far away, and making sure the game was difficult was pretty hard. We fixed it by watching a LOT of tuts on youtube, and searching the depths of reddit for answers.
 
 ## what's next
 
