@@ -2,7 +2,7 @@
 
 Friendly Freeze is a ragebait game made for Hack Club's Snowglobe program.
 
-**Live Demo:** https://…
+**Live Demo:** https://ragebait3erf.itch.io/ragebait-freeze
 
 
 **Built By:**
@@ -12,8 +12,6 @@ Parthiki - Node structure and code/ music
 Rosy - Background, assets, and frames for FBF animations
 
 Sushmita - Animations and code
-
-![screenshot of the project](screenshot.png)
 
 ## Description
 
@@ -36,4 +34,6 @@ https://jams.hackclub.com/jam/godot-platformer
 
 …
 YAY: ![Project Screenshot](IMG_5499.jpg)
+<img width="935" height="521" alt="Screenshot (262)" src="https://github.com/user-attachments/assets/99e6ee38-7e8c-49fd-8a7e-a83cce477110" />
+
 
