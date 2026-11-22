@@ -11,8 +11,13 @@
 [ext_resource type="Script" uid="uid://dal8svfbx6v63" path="res://scenes/animatable_body_2d.gd" id="9_e3sih"]
 [ext_resource type="Texture2D" uid="uid://cetk7yhm5d4oe" path="res://IMG_5467.jpg" id="10_2y5yt"]
 [ext_resource type="Texture2D" uid="uid://bxc5cc8n421y1" path="res://IMG_5471.jpg" id="11_2os1m"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://igw40udfkxkp" path="res://scripts/spike.gd" id="12_7gny6"]
 [ext_resource type="Texture2D" uid="uid://dwl5q6f2bbfi6" path="res://scenes/Screenshot 2026-11-22 124022-Photoroom.png" id="12_go7sj"]
+=======
+[ext_resource type="Texture2D" uid="uid://6mu1tj16vicu" path="res://assets/snow.png" id="12_7gny6"]
+[ext_resource type="Texture2D" uid="uid://dgnal66oap010" path="res://assets/fire.png" id="13_2aecg"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcsxo"]
 size = Vector2(81, 108)
@@ -61,8 +66,16 @@ size = Vector2(424.5, 110.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15mv3"]
 size = Vector2(213, 53)
 
+<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlkih"]
 size = Vector2(70, 46)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dial"]
+size = Vector2(151, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nomh"]
+size = Vector2(96, 144)
+>>>>>>> Stashed changes
 
 [node name="level1" type="Node2D" unique_id=1621030381]
 position = Vector2(-2, 0)
@@ -298,6 +311,7 @@ z_index = -9
 position = Vector2(-6.5285645, -1288.1259)
 texture = ExtResource("11_2os1m")
 
+<<<<<<< Updated upstream
 [node name="spike" type="Area2D" parent="." unique_id=547848742]
 script = ExtResource("12_7gny6")
 metadata/_edit_group_ = true
@@ -312,3 +326,26 @@ position = Vector2(763, 480)
 shape = SubResource("RectangleShape2D_dlkih")
 
 [connection signal="body_entered" from="spike" to="spike" method="_on_body_entered"]
+=======
+[node name="snow" type="Area2D" parent="." unique_id=773101502]
+
+[node name="Sprite2D" type="Sprite2D" parent="snow" unique_id=502306639]
+position = Vector2(705, 401)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_7gny6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="snow" unique_id=734992219]
+position = Vector2(698.5, 401)
+shape = SubResource("RectangleShape2D_6dial")
+
+[node name="fire" type="Area2D" parent="." unique_id=1250080274]
+
+[node name="Sprite2D" type="Sprite2D" parent="fire" unique_id=651529297]
+position = Vector2(1258, 487)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_2aecg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire" unique_id=2101471998]
+position = Vector2(1251, 509)
+shape = SubResource("RectangleShape2D_7nomh")
+>>>>>>> Stashed changes
