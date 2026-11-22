@@ -35,4 +35,5 @@ https://jams.hackclub.com/jam/godot-platformer
 ## what's next
 
 …
-YAY: [Screenshot description](IMG_5499.JPG)
+YAY: ![Project Screenshot](IMG_5499.jpg)
+
