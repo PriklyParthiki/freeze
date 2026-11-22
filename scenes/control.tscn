@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://c53j82fg3gpa4"]
+
+[ext_resource type="Script" uid="uid://1g3u6d6ti4hb" path="res://scripts/control.gd" id="1_5p55f"]
+[ext_resource type="Texture2D" uid="uid://dh7sy0vkynw8t" path="res://scenes/img_5463_360-Photoroom.png" id="2_brbbq"]
+[ext_resource type="Texture2D" uid="uid://yg5fi8htd0h" path="res://IMG_5490-Photoroom.png" id="3_8n18e"]
+[ext_resource type="Texture2D" uid="uid://bjeb1c7q14gqw" path="res://360_F_1910014587_dWnLYBvjFBKXGI0jo10NZnFtXVw0Igek-Photoroom.png" id="4_8n18e"]
+[ext_resource type="Texture2D" uid="uid://c1s88ie481pqj" path="res://Screenshot 2026-11-22 120924-Photoroom.png" id="4_lt2xq"]
+[ext_resource type="Texture2D" uid="uid://bokblwlgdeb24" path="res://scenes/Screenshot 2026-11-22 111914-Photoroom.png" id="5_lpubu"]
+[ext_resource type="Texture2D" uid="uid://dnk7giph6whlq" path="res://scenes/Screenshot 2026-11-22 111931-Photoroom.png" id="6_lt2xq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dcsxo"]
+
+[node name="Control" type="Control" unique_id=877930009]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 13.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p55f")
+character_portraits = Array[Texture2D]([ExtResource("2_brbbq"), ExtResource("3_8n18e")])
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=864527487]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -35.0
+offset_right = 1235.0
+offset_bottom = 672.0
+mouse_filter = 2
+color = Color(0.5491126, 0.73345155, 1, 1)
+
+[node name="TitleScreen" type="Control" parent="." unique_id=2111312857]
+anchors_preset = 0
+offset_top = -4.0
+offset_right = 268.0
+offset_bottom = 175.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreen" unique_id=936580342]
+position = Vector2(641, 104.00001)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_lt2xq")
+
+[node name="StartButton" type="Button" parent="TitleScreen" unique_id=672277576]
+layout_mode = 0
+offset_left = -69.0
+offset_top = -52.0
+offset_right = 580.0
+offset_bottom = 316.0
+scale = Vector2(2, 2)
+icon = ExtResource("4_8n18e")
+flat = true
+
+[node name="CharacterSelect" type="Control" parent="." unique_id=1634185151]
+anchors_preset = 0
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 54.0
+offset_bottom = 47.0
+
+[node name="LeftButton" type="Button" parent="CharacterSelect" unique_id=485225860]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.072
+anchor_bottom = 3.062
+offset_left = -20.0
+offset_top = 200.0
+offset_right = 104.119995
+offset_bottom = 533.52
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("5_lpubu")
+flat = true
+
+[node name="RightButton" type="Button" parent="CharacterSelect" unique_id=991940498]
+layout_mode = 0
+offset_left = 1002.0
+offset_top = 200.0
+offset_right = 1202.0
+offset_bottom = 638.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("6_lt2xq")
+flat = true
+
+[node name="PlayButton" type="Button" parent="CharacterSelect" unique_id=1872305051]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CharacterName" type="Label" parent="CharacterSelect" unique_id=285603574]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 154.0
+offset_right = 563.0
+offset_bottom = 177.0
+text = "PEnguin"
+label_settings = SubResource("LabelSettings_dcsxo")
+
+[node name="CharacterImage" type="TextureRect" parent="CharacterSelect" unique_id=1045639878]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 105.0
+offset_right = 756.0
+offset_bottom = 586.0
+texture = ExtResource("2_brbbq")
+
+[connection signal="pressed" from="TitleScreen/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CharacterSelect/LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="CharacterSelect/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="CharacterSelect/PlayButton" to="." method="_on_play_button_pressed"]
